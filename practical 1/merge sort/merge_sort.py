@@ -7,31 +7,20 @@ Time Complexity:
     - Worst Case: O(n log n)
 
 Space Complexity:
-    - O(n) Auxiliary Space (Divide & Conquer algorithm)
+    - O(n)
 """
 
 def merge_sort(arr: list) -> list:
-    """
-    Sorts an array in non-decreasing order using the Merge Sort algorithm.
-
-    Parameters:
-        arr (list): List of elements to be sorted.
-
-    Returns:
-        list: The sorted list.
-    """
     if len(arr) > 1:
         mid = len(arr) // 2
         left_half = arr[:mid]
         right_half = arr[mid:]
 
-        # Recursive calls
         merge_sort(left_half)
         merge_sort(right_half)
 
         i = j = k = 0
 
-        # Copy data to temp arrays left_half[] and right_half[]
         while i < len(left_half) and j < len(right_half):
             if left_half[i] <= right_half[j]:
                 arr[k] = left_half[i]
@@ -41,13 +30,11 @@ def merge_sort(arr: list) -> list:
                 j += 1
             k += 1
 
-        # Checking if any element was left in left_half
         while i < len(left_half):
             arr[k] = left_half[i]
             i += 1
             k += 1
 
-        # Checking if any element was left in right_half
         while j < len(right_half):
             arr[k] = right_half[j]
             j += 1
