@@ -11,16 +11,7 @@ Space Complexity:
 """
 
 def linear_search(arr: list, target: int) -> int:
-    """
-    Searches for a target element in a list sequentially.
 
-    Parameters:
-        arr (list): List of elements to search in.
-        target (int/any): The value to search for.
-
-    Returns:
-        int: Index of target if found, else -1.
-    """
     for index, element in enumerate(arr):
         if element == target:
             return index
@@ -40,7 +31,6 @@ if __name__ == "__main__":
     else:
         print("Element not found in the array.")
 
-    # Test not found case
     missing_val = 100
     print(f"\nSearching for missing target: {missing_val}")
     result_missing = linear_search(sample_list, missing_val)
