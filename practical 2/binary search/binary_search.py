@@ -9,21 +9,11 @@ Time Complexity:
     - Worst Case: O(log n)
 
 Space Complexity:
-    - Iterative: O(1) Auxiliary Space
-    - Recursive: O(log n) Auxiliary Space for call stack
+    - Iterative: O(1)
+    - Recursive: O(log n) 
 """
 
 def binary_search_iterative(arr: list, target: int) -> int:
-    """
-    Performs iterative binary search on a sorted array.
-
-    Parameters:
-        arr (list): Sorted list of elements.
-        target (int/any): Value to search for.
-
-    Returns:
-        int: Index of target if found, else -1.
-    """
     low = 0
     high = len(arr) - 1
 
@@ -41,18 +31,7 @@ def binary_search_iterative(arr: list, target: int) -> int:
 
 
 def binary_search_recursive(arr: list, target: int, low: int, high: int) -> int:
-    """
-    Performs recursive binary search on a sorted array within bounds [low, high].
 
-    Parameters:
-        arr (list): Sorted list of elements.
-        target (int/any): Value to search for.
-        low (int): Lower index bound.
-        high (int): Higher index bound.
-
-    Returns:
-        int: Index of target if found, else -1.
-    """
     if low <= high:
         mid = (low + high) // 2
 
