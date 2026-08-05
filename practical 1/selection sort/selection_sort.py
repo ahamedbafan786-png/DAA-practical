@@ -1,17 +1,14 @@
 """
-Selection Sort Algorithm Implementation in Python.
-
 Time Complexity:
     - Best Case: O(n^2)
     - Average Case: O(n^2)
     - Worst Case: O(n^2)
 
 Space Complexity:
-    - O(1) 
+    - O(1)
 """
 
 def selection_sort(arr: list) -> list:
-
     n = len(arr)
     for i in range(n):
         min_idx = i
@@ -23,7 +20,8 @@ def selection_sort(arr: list) -> list:
 
 
 if __name__ == "__main__":
-    sample_data = [64, 25, 12, 22, 11]
+    user_input = input("Enter numbers separated by spaces: ")
+    sample_data = list(map(int, user_input.split()))
     print("Original Array:", sample_data)
     sorted_data = selection_sort(sample_data.copy())
     print("Sorted Array (Selection Sort):", sorted_data)

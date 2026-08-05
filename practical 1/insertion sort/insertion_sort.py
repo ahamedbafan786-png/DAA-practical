@@ -1,8 +1,6 @@
 """
-Insertion Sort Algorithm Implementation in Python.
-
 Time Complexity:
-    - Best Case: O(n) when array is already sorted
+    - Best Case: O(n)
     - Average Case: O(n^2)
     - Worst Case: O(n^2)
 
@@ -22,7 +20,8 @@ def insertion_sort(arr: list) -> list:
 
 
 if __name__ == "__main__":
-    sample_data = [12, 11, 13, 5, 6]
+    user_input = input("Enter numbers separated by spaces: ")
+    sample_data = list(map(int, user_input.split()))
     print("Original Array:", sample_data)
     sorted_data = insertion_sort(sample_data.copy())
     print("Sorted Array (Insertion Sort):", sorted_data)

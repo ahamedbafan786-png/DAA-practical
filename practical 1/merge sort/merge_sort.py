@@ -1,6 +1,4 @@
 """
-Merge Sort Algorithm Implementation in Python.
-
 Time Complexity:
     - Best Case: O(n log n)
     - Average Case: O(n log n)
@@ -44,7 +42,8 @@ def merge_sort(arr: list) -> list:
 
 
 if __name__ == "__main__":
-    sample_data = [38, 27, 43, 3, 9, 82, 10]
+    user_input = input("Enter numbers separated by spaces: ")
+    sample_data = list(map(int, user_input.split()))
     print("Original Array:", sample_data)
     sorted_data = merge_sort(sample_data.copy())
     print("Sorted Array (Merge Sort):", sorted_data)

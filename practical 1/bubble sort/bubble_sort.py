@@ -1,13 +1,11 @@
 """
-Bubble Sort Algorithm Implementation in Python.
-
 Time Complexity:
-    - Best Case: O(n) when array is already sorted
+    - Best Case: O(n)
     - Average Case: O(n^2)
     - Worst Case: O(n^2)
 
 Space Complexity:
-    - O(1) 
+    - O(1)
 """
 
 def bubble_sort(arr: list) -> list:
@@ -24,7 +22,8 @@ def bubble_sort(arr: list) -> list:
 
 
 if __name__ == "__main__":
-    sample_data = [64, 34, 25, 12, 22, 11, 90]
+    user_input = input("Enter numbers separated by spaces: ")
+    sample_data = list(map(int, user_input.split()))
     print("Original Array:", sample_data)
     sorted_data = bubble_sort(sample_data.copy())
     print("Sorted Array (Bubble Sort):", sorted_data)

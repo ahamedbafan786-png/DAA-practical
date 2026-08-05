@@ -1,16 +1,12 @@
 """
-Binary Search Algorithm Implementation in Python.
-
-Requires the input array to be sorted in ascending order.
-
 Time Complexity:
-    - Best Case: O(1) when middle element is target
+    - Best Case: O(1)
     - Average Case: O(log n)
     - Worst Case: O(log n)
 
 Space Complexity:
     - Iterative: O(1)
-    - Recursive: O(log n) 
+    - Recursive: O(log n)
 """
 
 def binary_search_iterative(arr: list, target: int) -> int:
@@ -31,7 +27,6 @@ def binary_search_iterative(arr: list, target: int) -> int:
 
 
 def binary_search_recursive(arr: list, target: int, low: int, high: int) -> int:
-
     if low <= high:
         mid = (low + high) // 2
 
@@ -46,8 +41,9 @@ def binary_search_recursive(arr: list, target: int, low: int, high: int) -> int:
 
 
 if __name__ == "__main__":
-    sorted_array = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
-    target_val = 23
+    user_input = input("Enter sorted numbers separated by spaces: ")
+    sorted_array = list(map(int, user_input.split()))
+    target_val = int(input("Enter element to search for: "))
 
     print("Sorted Array:", sorted_array)
     print(f"Target value: {target_val}")
@@ -57,9 +53,3 @@ if __name__ == "__main__":
 
     res_recursive = binary_search_recursive(sorted_array, target_val, 0, len(sorted_array) - 1)
     print(f"Recursive Binary Search result index: {res_recursive}")
-
-    # Test missing value
-    missing_target = 50
-    print(f"\nSearching for missing target: {missing_target}")
-    res_missing = binary_search_iterative(sorted_array, missing_target)
-    print(f"Result: {res_missing}")

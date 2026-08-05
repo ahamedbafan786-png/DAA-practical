@@ -1,17 +1,14 @@
 """
-Linear Search Algorithm Implementation in Python.
-
 Time Complexity:
-    - Best Case: O(1) when target is at the first position
+    - Best Case: O(1)
     - Average Case: O(n)
-    - Worst Case: O(n) when target is at the end or not present
+    - Worst Case: O(n)
 
 Space Complexity:
-    - O(1) Auxiliary Space
+    - O(1)
 """
 
 def linear_search(arr: list, target: int) -> int:
-
     for index, element in enumerate(arr):
         if element == target:
             return index
@@ -19,8 +16,9 @@ def linear_search(arr: list, target: int) -> int:
 
 
 if __name__ == "__main__":
-    sample_list = [10, 50, 30, 70, 80, 20, 90, 40]
-    target_val = 30
+    user_input = input("Enter numbers separated by spaces: ")
+    sample_list = list(map(int, user_input.split()))
+    target_val = int(input("Enter element to search for: "))
 
     print("Array:", sample_list)
     print(f"Searching for target: {target_val}")
@@ -30,8 +28,3 @@ if __name__ == "__main__":
         print(f"Element found at index: {result}")
     else:
         print("Element not found in the array.")
-
-    missing_val = 100
-    print(f"\nSearching for missing target: {missing_val}")
-    result_missing = linear_search(sample_list, missing_val)
-    print(f"Result: {result_missing}")

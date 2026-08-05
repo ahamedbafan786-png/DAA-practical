@@ -1,6 +1,4 @@
 """
-Quick Sort Algorithm Implementation in Python.
-
 Time Complexity:
     - Best Case: O(n log n)
     - Average Case: O(n log n)
@@ -11,9 +9,8 @@ Space Complexity:
 """
 
 def partition(arr: list, low: int, high: int) -> int:
-
     pivot = arr[high]
-    i = low - 1 
+    i = low - 1
 
     for j in range(low, high):
         if arr[j] <= pivot:
@@ -25,24 +22,20 @@ def partition(arr: list, low: int, high: int) -> int:
 
 
 def quick_sort_helper(arr: list, low: int, high: int) -> None:
-    """
-    Recursive helper function to execute Quick Sort within bounds [low, high].
-    """
     if low < high:
         pi = partition(arr, low, high)
-
         quick_sort_helper(arr, low, pi - 1)
         quick_sort_helper(arr, pi + 1, high)
 
 
 def quick_sort(arr: list) -> list:
-
     quick_sort_helper(arr, 0, len(arr) - 1)
     return arr
 
 
 if __name__ == "__main__":
-    sample_data = [10, 7, 8, 9, 1, 5]
+    user_input = input("Enter numbers separated by spaces: ")
+    sample_data = list(map(int, user_input.split()))
     print("Original Array:", sample_data)
     sorted_data = quick_sort(sample_data.copy())
     print("Sorted Array (Quick Sort):", sorted_data)
