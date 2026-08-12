@@ -40,7 +40,7 @@ def binary_search_recursive(arr: list, target: int, low: int, high: int) -> int:
     return -1
 
 
-if __name__ == "__main__":
+def main():
     user_input = input("Enter sorted numbers separated by spaces: ")
     sorted_array = list(map(int, user_input.split()))
     target_val = int(input("Enter element to search for: "))
@@ -53,3 +53,7 @@ if __name__ == "__main__":
 
     res_recursive = binary_search_recursive(sorted_array, target_val, 0, len(sorted_array) - 1)
     print(f"Recursive Binary Search result index: {res_recursive}")
+
+
+if __name__ == "__main__":
+    main()

@@ -15,7 +15,7 @@ def linear_search(arr: list, target: int) -> int:
     return -1
 
 
-if __name__ == "__main__":
+def main():
     user_input = input("Enter numbers separated by spaces: ")
     sample_list = list(map(int, user_input.split()))
     target_val = int(input("Enter element to search for: "))
@@ -28,3 +28,7 @@ if __name__ == "__main__":
         print(f"Element found at index: {result}")
     else:
         print("Element not found in the array.")
+
+
+if __name__ == "__main__":
+    main()

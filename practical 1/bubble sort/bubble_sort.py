@@ -21,9 +21,13 @@ def bubble_sort(arr: list) -> list:
     return arr
 
 
-if __name__ == "__main__":
+def main():
     user_input = input("Enter numbers separated by spaces: ")
     sample_data = list(map(int, user_input.split()))
     print("Original Array:", sample_data)
     sorted_data = bubble_sort(sample_data.copy())
     print("Sorted Array (Bubble Sort):", sorted_data)
+
+
+if __name__ == "__main__":
+    main()
