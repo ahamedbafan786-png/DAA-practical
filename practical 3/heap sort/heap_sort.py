@@ -8,7 +8,7 @@ Space Complexity:
     - O(1)
 """
 
-def heapify(arr: list, n: int, i: int) -> None:
+def heapify(arr: list, n: int, i: int):
     largest = i
     left = 2 * i + 1
     right = 2 * i + 2
@@ -24,7 +24,7 @@ def heapify(arr: list, n: int, i: int) -> None:
         heapify(arr, n, largest)
 
 
-def heap_sort(arr: list) -> list:
+def heap_sort(arr: list):
     n = len(arr)
 
     for i in range(n // 2 - 1, -1, -1):
