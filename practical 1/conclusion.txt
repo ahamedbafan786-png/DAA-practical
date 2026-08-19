@@ -7,6 +7,6 @@ In this practical, we implemented and analyzed fundamental sorting algorithms:
 4. Merge Sort: Guaranteed O(n log n) time complexity across all cases, O(n) space complexity. A stable divide-and-conquer sorting algorithm.
 5. Quick Sort: O(n log n) average time complexity, O(n^2) worst case, O(log n) auxiliary call stack space. Efficient in-place sorting method.
 
-Key Takeaways:
+note :
 - Comparison-based sorting algorithms display clear trade-offs between execution speed and memory usage.
 - Divide-and-conquer sorting techniques (Merge Sort & Quick Sort) significantly outperform quadratic O(n^2) algorithms on larger datasets.

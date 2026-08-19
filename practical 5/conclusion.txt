@@ -1,6 +1,6 @@
 CONCLUSION - PRACTICAL 5: 0/1 KNAPSACK PROBLEM
 
-In this practical, we implemented the 0/1 Knapsack Problem using Dynamic Programming (Bottom-Up Tabulation):
+In this practical, we implemented the 0/1 Knapsack Problem using Dynamic Programming approach:
 
 1. Dynamic Programming Formulation:
    - Divides optimization decisions into subproblems avoiding recalculation.
@@ -10,6 +10,6 @@ In this practical, we implemented the 0/1 Knapsack Problem using Dynamic Program
    - Time Complexity: O(n * W), where `n` is item count and `W` is maximum knapsack capacity.
    - Space Complexity: O(n * W) for storing intermediate subproblem states.
 
-Key Takeaways:
-- Dynamic Programming replaces exponential recursive complexity O(2^n) with pseudo-polynomial time O(n * W).
-- Solves combinatorial optimization efficiently by storing optimal solutions to subproblems.
+note:
+- Dynamic Programming replaces exponential recursive complexity O(2^n) with time O(n * W).
+
