@@ -2,12 +2,8 @@
 0/1 Knapsack Problem (Dynamic Programming)
 
 Time Complexity: O(n * W)
-- n: Number of items
-- W: Knapsack capacity
-- Two nested loops iterate n times and W times respectively.
 
 Space Complexity: O(n * W)
-- 2D DP table of size (n + 1) x (W + 1) to store intermediate subproblem results.
 """
 
 

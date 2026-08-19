@@ -1,0 +1,17 @@
+CONCLUSION - PRACTICAL 4: FACTORIAL CALCULATION
+
+In this practical, we implemented factorial computation comparing Iterative and Recursive techniques:
+
+1. Iterative Approach:
+   - Time Complexity: O(n)
+   - Space Complexity: O(1)
+   - Executes product accumulation using simple loop iteration.
+
+2. Recursive Approach:
+   - Time Complexity: O(n)
+   - Space Complexity: O(n) auxiliary call stack space.
+   - Leverages recurrence relations with base cases (n=0 or n=1).
+
+Key Takeaways:
+- Iterative computation is space-optimal O(1) and eliminates recursion stack overhead.
+- Recursive approach illustrates inductive problem-solving and mathematical recurrence structures.

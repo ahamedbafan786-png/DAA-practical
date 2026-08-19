@@ -1,0 +1,17 @@
+CONCLUSION - PRACTICAL 2: SEARCHING ALGORITHMS
+
+In this practical, we implemented and evaluated Linear Search and Binary Search algorithms (Iterative and Recursive):
+
+1. Linear Search:
+   - Time Complexity: Best: O(1), Average: O(n), Worst: O(n)
+   - Space Complexity: O(1)
+   - Operates on unsorted data sequences by checking elements sequentially.
+
+2. Binary Search (Iterative & Recursive):
+   - Time Complexity: Best: O(1), Average: O(log n), Worst: O(log n)
+   - Space Complexity: Iterative: O(1), Recursive: O(log n) due to call stack depth.
+   - Requires pre-sorted input data and divides the search space in half at each step.
+
+Key Takeaways:
+- Binary Search provides logarithmic O(log n) search time, making it significantly faster than Linear Search O(n) for large datasets.
+- Iterative Binary Search minimizes space overhead to O(1), whereas Recursive implementation provides cleaner call-stack framing.
