@@ -12,6 +12,6 @@ In this practical, we implemented factorial computation comparing Iterative and 
    - Space Complexity: O(n) auxiliary call stack space.
    - Leverages recurrence relations with base cases (n=0 or n=1).
 
-note:
+note :
 - Iterative computation is space-optimal O(1) and eliminates recursion stack overhead.
 - Recursive approach illustrates inductive problem-solving and mathematical recurrence structures.

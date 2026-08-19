@@ -12,6 +12,6 @@ In this practical, we implemented and evaluated Linear Search and Binary Search 
    - Space Complexity: Iterative: O(1), Recursive: O(log n) due to call stack depth.
    - Requires pre-sorted input data and divides the search space in half at each step.
 
-Key Takeaways:
+note :
 - Binary Search provides logarithmic O(log n) search time, making it significantly faster than Linear Search O(n) for large datasets.
 - Iterative Binary Search minimizes space overhead to O(1), whereas Recursive implementation provides cleaner call-stack framing.

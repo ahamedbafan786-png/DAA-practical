@@ -10,6 +10,6 @@ In this practical, we implemented and analyzed the Heap Sort algorithm using a M
    - Time Complexity: Best: O(n log n), Average: O(n log n), Worst: O(n log n)
    - Space Complexity: O(1) auxiliary space (in-place sorting).
 
-Key Takeaways:
+note :
 - Heap Sort guarantees O(n log n) runtime bound regardless of initial input permutation.
 - It combines the worst-case efficiency of Merge Sort with the O(1) space advantage of Insertion Sort.
