@@ -1,0 +1,16 @@
+CONCLUSION - PRACTICAL 7: COIN CHANGE (MAKING CHANGE) PROBLEM (DYNAMIC PROGRAMMING)
+
+In this practical, we implemented the Coin Change Making problem using the Dynamic Programming approach:
+
+1. Dynamic Programming Formulation:
+   - Finds the minimum number of coins needed to make a specific target value using given denominations.
+   - Solves subproblems iteratively by building a 1D DP table `dp[i]` representing the minimum coins required to make amount `i`.
+   - Uses recurrence relation: `dp[i] = min(dp[i], dp[i - coin] + 1)` for each available coin denomination.
+
+2. Performance Metrics:
+   - Time Complexity: O(n * amount), where `n` is the number of coin denominations and `amount` is the target value.
+   - Space Complexity: O(amount) for storing minimum coin counts up to the target amount in the DP table.
+
+note:
+- Dynamic Programming guarantees finding the global optimal solution for arbitrary coin systems where standard Greedy approaches fail.
+- Subproblem reuse avoids exponential recalculations characteristic of naive recursive solutions.
