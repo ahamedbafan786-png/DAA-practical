@@ -25,7 +25,7 @@ def coin_change(coins, n, amount):
 
 
 def main():
-    n = int(input("Enter number of coin denominations: "))
+    n = int(input("Enter number of coins: "))
 
     coins = list(map(int, input("Enter coin values:\n").split()))
 
