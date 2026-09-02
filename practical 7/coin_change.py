@@ -6,30 +6,37 @@ Time Complexity: O(n * amount)
 Space Complexity: O(amount)
 """
 
+INF = float('inf')
 
-def coin_change(coins, amount):
-    dp = [float("inf")] * (amount + 1)
+
+def coin_change(coins, n, amount):
+    dp = [INF] * (amount + 1)
     dp[0] = 0
 
-    for coin in coins:
-        for i in range(coin, amount + 1):
-            if dp[i - coin] != float("inf"):
-                dp[i] = min(dp[i], dp[i - coin] + 1)
+    for i in range(1, amount + 1):
+        for j in range(n):
+            if coins[j] <= i:
+                dp[i] = min(dp[i], dp[i - coins[j]] + 1)
 
-    return dp[amount] if dp[amount] != float("inf") else -1
+    if dp[amount] == INF:
+        return -1
+
+    return dp[amount]
 
 
 def main():
-    n = int(input("Enter number of coins: "))
-    coins = list(map(int, input("Enter coins:\n").split()))
+    n = int(input("Enter number of coin denominations: "))
+
+    coins = list(map(int, input("Enter coin values:\n").split()))
+
     amount = int(input("Enter amount: "))
 
-    result = coin_change(coins, amount)
+    ans = coin_change(coins, n, amount)
 
-    if result != -1:
-        print("\nMinimum number of coins needed =", result)
+    if ans == -1:
+        print("\nChange cannot be made.")
     else:
-        print("\nChange cannot be made with given coins.")
+        print("\nMinimum Coins Required =", ans)
 
 
 if __name__ == "__main__":
