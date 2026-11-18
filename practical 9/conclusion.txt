@@ -1,0 +1,20 @@
+CONCLUSION - PRACTICAL 9: PRIM'S ALGORITHM (MINIMUM SPANNING TREE)
+
+In this practical, we implemented and analyzed Prim's Algorithm to find the Minimum Spanning Tree (MST) of a connected, weighted, undirected graph using the Greedy approach.
+
+1. Greedy Strategy:
+   - Starts with an arbitrary vertex and grows the spanning tree one vertex at a time.
+   - At each step, selects the minimum-weight edge connecting a vertex in the tree to a vertex outside the tree.
+   - Avoids cycle formation by ensuring newly connected vertices have not been previously selected.
+   - Terminates when all V vertices are included, resulting in exactly V - 1 edges.
+
+2. Performance Metrics:
+   - Time Complexity:
+     - Adjacency Matrix representation: O(V^2) across best, average, and worst cases.
+     - With Min-Heap / Priority Queue and Adjacency List: O(E log V).
+   - Space Complexity:
+     - O(V) auxiliary space for visited tracking arrays and MST vertices.
+
+note:
+- Prim's algorithm is well-suited for dense graphs where the number of edges E is close to V^2.
+- The greedy choice property guarantees a globally optimal minimum spanning tree.

@@ -1,0 +1,19 @@
+CONCLUSION - PRACTICAL 11: FLOYD-WARSHALL ALGORITHM (ALL-PAIRS SHORTEST PATH)
+
+In this practical, we implemented and analyzed the Floyd-Warshall Algorithm to determine the shortest paths between all pairs of vertices in a weighted graph using Dynamic Programming.
+
+1. Dynamic Programming Formulation:
+   - Computes all-pairs shortest paths by considering each vertex as an intermediate node k (1 to V).
+   - Updates the distance between vertex pairs (i, j) iteratively:
+     graph[i][j] = min(graph[i][j], graph[i][k] + graph[k][j])
+   - Works effectively with positive and negative edge weights (provided no negative weight cycles exist).
+
+2. Performance Metrics:
+   - Time Complexity:
+     - O(V^3) across best, average, and worst cases due to three nested loops iterating over all vertices.
+   - Space Complexity:
+     - O(V^2) for the 2D distance matrix.
+
+note:
+- Floyd-Warshall is particularly suitable for dense graphs and when shortest paths between all pairs of nodes are needed.
+- It can also be adapted to detect negative weight cycles if any diagonal element graph[i][i] becomes negative.
