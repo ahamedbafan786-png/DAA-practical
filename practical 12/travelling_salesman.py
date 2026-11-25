@@ -1,56 +1,43 @@
 """
-Travelling Salesman Problem (Dynamic Programming)
+Travelling Salesman Problem (Brute Force / Permutation)
 
 Time Complexity:
-    - Best Case    : O(n^2 * 2^n)
-    - Average Case : O(n^2 * 2^n)
-    - Worst Case   : O(n^2 * 2^n)
+    - Best Case    : O(n!)
+    - Average Case : O(n!)
+    - Worst Case   : O(n!)
 
 Space Complexity:
-    - O(n * 2^n)
+    - O(n)
 """
 
 INF = 9999
 
 
 def tsp(graph, n):
-    memo = [[-1] * n for _ in range(1 << n)]
-    next_city = [[-1] * n for _ in range(1 << n)]
+    visited = [False] * n
+    visited[0] = True
+    min_cost = INF
+    best_path = []
 
-    def solve(mask, pos):
-        if mask == (1 << n) - 1:
-            return graph[pos][0]
+    def solve(pos, count, cost, path):
+        nonlocal min_cost, best_path
 
-        if memo[mask][pos] != -1:
-            return memo[mask][pos]
-
-        min_cost = INF
-        best_next = -1
+        if count == n:
+            if graph[pos][0] != INF:
+                total = cost + graph[pos][0]
+                if total < min_cost:
+                    min_cost = total
+                    best_path = path + [0]
+            return
 
         for city in range(n):
-            if not (mask & (1 << city)):
-                cost = graph[pos][city] + solve(mask | (1 << city), city)
-                if cost < min_cost:
-                    min_cost = cost
-                    best_next = city
+            if not visited[city] and graph[pos][city] != INF:
+                visited[city] = True
+                solve(city, count + 1, cost + graph[pos][city], path + [city])
+                visited[city] = False
 
-        memo[mask][pos] = min_cost
-        next_city[mask][pos] = best_next
-        return min_cost
-
-    min_cost = solve(1, 0)
-
-    path = [0]
-    mask = 1
-    pos = 0
-    while next_city[mask][pos] != -1:
-        nxt = next_city[mask][pos]
-        path.append(nxt)
-        mask |= 1 << nxt
-        pos = nxt
-    path.append(0)
-
-    return min_cost, path
+    solve(0, 1, 0, [0])
+    return min_cost, best_path
 
 
 def main():
