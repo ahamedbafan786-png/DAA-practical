@@ -1,0 +1,19 @@
+CONCLUSION - PRACTICAL 10: KRUSKAL'S ALGORITHM (MINIMUM SPANNING TREE)
+
+In this practical, we implemented and analyzed Kruskal's Algorithm to find the Minimum Spanning Tree (MST) of a connected, weighted, undirected graph using the Greedy approach.
+
+1. Greedy Strategy & Disjoint Set Union:
+   - Sorts all edges in non-decreasing order of their weights.
+   - Iteratively picks the smallest available edge that does not form a cycle with the edges already included in the MST.
+   - Uses Disjoint Set Union (Union-Find with union by rank) to efficiently detect cycles in near-constant amortized time.
+   - Stops once V - 1 edges have been added to form the Minimum Spanning Tree.
+
+2. Performance Metrics:
+   - Time Complexity:
+     - O(E log E) across best, average, and worst cases, dominated by sorting the E edges.
+   - Space Complexity:
+     - O(V + E) for storing the edge list along with parent and rank arrays for Union-Find.
+
+note:
+- Kruskal's algorithm is particularly efficient for sparse graphs where the number of edges E is much smaller than V^2.
+- Both Prim's and Kruskal's algorithms yield the same minimum spanning tree total weight for a connected graph.

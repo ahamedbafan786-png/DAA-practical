@@ -1,0 +1,20 @@
+CONCLUSION - PRACTICAL 12: TRAVELLING SALESMAN PROBLEM (DYNAMIC PROGRAMMING)
+
+In this practical, we implemented and analyzed the Travelling Salesman Problem (TSP) using Dynamic Programming with bitmasking (Held-Karp algorithm) to find the minimum-cost Hamiltonian cycle.
+
+1. Dynamic Programming Formulation:
+   - Represents the set of visited cities using an integer bitmask and tracks the current city position.
+   - Solves overlapping subproblems recursively with memoization:
+     solve(mask, pos) = min(graph[pos][city] + solve(mask | (1 << city), city))
+     over all unvisited cities.
+   - Reconstructs the exact optimal tour starting and ending at city 0 alongside the minimum travelling cost.
+
+2. Performance Metrics:
+   - Time Complexity:
+     - O(n^2 * 2^n) across best, average, and worst cases, where n is the number of cities.
+   - Space Complexity:
+     - O(n * 2^n) for the memoization and next-city tracking tables.
+
+note:
+- Dynamic Programming drastically reduces the complexity compared to brute-force O(n!) permutation search, making exact solutions feasible for moderate numbers of cities.
+- TSP is an NP-hard combinatorial optimization problem with applications in logistics, routing, and scheduling.
